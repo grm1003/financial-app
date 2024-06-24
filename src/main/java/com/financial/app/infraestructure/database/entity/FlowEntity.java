@@ -4,8 +4,9 @@ package com.financial.app.infraestructure.database.entity;
 import com.financial.app.domain.entitys.CashFlow;
 import com.financial.app.domain.enums.CategoryEnum;
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-
+@Data
 @Entity
 @NoArgsConstructor
 @Table(name = "cash_flow")
@@ -28,7 +29,7 @@ public class FlowEntity {
     private double amount;
 
     public FlowEntity(CashFlow cashFlow) {
-        this.email = cashFlow.getData().getEmail();
+        this.email = cashFlow.getUser().getEmail();
         this.description = cashFlow.getDescription().orElse(null);
         this.category = cashFlow.getCategory();
         this.amount = cashFlow.getAmount();
