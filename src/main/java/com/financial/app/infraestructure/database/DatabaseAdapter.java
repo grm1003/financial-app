@@ -8,11 +8,13 @@ import com.financial.app.infraestructure.database.entity.UserEntity;
 import com.financial.app.infraestructure.database.repository.FlowRepository;
 import com.financial.app.infraestructure.database.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+@Service
 @RequiredArgsConstructor
 public class DatabaseAdapter implements DatabasePort {
     private final FlowRepository flowRepository;
@@ -39,8 +41,8 @@ public class DatabaseAdapter implements DatabasePort {
     }
 
     @Override
-    public Optional<UserDataModel> createUser(UserDataModel user) {
-        return Optional.of(userRepository.save(new UserEntity(user)).toEntity());
+    public void createUser(UserDataModel user) {
+        userRepository.save(new UserEntity(user)).toEntity();
     }
 
     @Override

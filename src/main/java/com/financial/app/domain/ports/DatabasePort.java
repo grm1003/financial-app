@@ -15,7 +15,7 @@ public interface DatabasePort {
 
     public List<UserDataModel>findAllUsers();
 
-    public Optional<UserDataModel>createUser(UserDataModel user);
+    public void createUser(UserDataModel user);
 
     public void deleteUser(String email);
 
