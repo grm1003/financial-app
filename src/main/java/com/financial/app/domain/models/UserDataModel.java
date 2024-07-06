@@ -1,4 +1,4 @@
-package com.financial.app.domain.entitys;
+package com.financial.app.domain.models;
 
 
 import lombok.Builder;

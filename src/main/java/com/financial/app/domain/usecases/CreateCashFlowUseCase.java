@@ -1,16 +1,15 @@
 package com.financial.app.domain.usecases;
 
 
-import com.financial.app.domain.entitys.CashFlow;
-import com.financial.app.domain.entitys.UserDataModel;
+import com.financial.app.domain.models.CashFlow;
+import com.financial.app.domain.models.UserDataModel;
 import com.financial.app.domain.enums.CashFlowType;
 import com.financial.app.domain.ports.DatabasePort;
-import com.financial.app.domain.resourses.CreateCashFlow;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class CreateCashFlowUseCase implements CreateCashFlow {
+public class CreateCashFlowUseCase implements com.financial.app.domain.resourses.CreateCashFlow {
     private final DatabasePort databasePort;
 
 

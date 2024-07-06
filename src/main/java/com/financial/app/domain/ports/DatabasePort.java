@@ -1,7 +1,7 @@
 package com.financial.app.domain.ports;
 
-import com.financial.app.domain.entitys.CashFlow;
-import com.financial.app.domain.entitys.UserDataModel;
+import com.financial.app.domain.models.CashFlow;
+import com.financial.app.domain.models.UserDataModel;
 
 import java.util.List;
 import java.util.Optional;

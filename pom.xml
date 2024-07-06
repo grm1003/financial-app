@@ -15,6 +15,13 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>20</java.version>
+		<sonar.coverage.minimum>0.80</sonar.coverage.minimum>
+		<sonar.coverage.exclusions>
+			**/infraestructure/**,
+			**/domain/models/**,
+			**/domain/enums/**,
+			**/com/financial/app/AppApplication.java
+		</sonar.coverage.exclusions>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -56,6 +63,40 @@
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.12</version>
+				<executions>
+					<execution>
+						<id>prepare-agent</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>report</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+						<configuration>
+							<excludes>
+								<exclude>**/infraestructure/**</exclude>
+								<exclude>**/AppApplication.java</exclude>
+								<exclude>**/domain/models/**</exclude>
+								<exclude>**/domain/enums/**</exclude>
+								<exclude>**/com/financial/app/AppApplication.java</exclude>
+							</excludes>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.9.0.2155</version>
+			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>

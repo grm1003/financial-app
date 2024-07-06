@@ -1,7 +1,7 @@
 package com.financial.app.infraestructure.database.entity;
 
 
-import com.financial.app.domain.entitys.CashFlow;
+import com.financial.app.domain.models.CashFlow;
 import com.financial.app.domain.enums.CategoryEnum;
 import jakarta.persistence.*;
 import lombok.Data;
