@@ -1,6 +1,6 @@
 package com.financial.app.infraestructure.database.entity;
 
-import com.financial.app.domain.entitys.UserDataModel;
+import com.financial.app.domain.models.UserDataModel;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

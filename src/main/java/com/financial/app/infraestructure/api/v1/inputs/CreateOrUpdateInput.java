@@ -1,6 +1,6 @@
 package com.financial.app.infraestructure.api.v1.inputs;
 
-import com.financial.app.domain.entitys.UserDataModel;
+import com.financial.app.domain.models.UserDataModel;
 import lombok.Data;
 
 @Data

@@ -18,6 +18,6 @@ public class UserController {
 
     @PostMapping
     public void createUser(@RequestBody CreateOrUpdateInput input) {
-        createorUpdateUser.createUser(input.toModel());
+        createorUpdateUser.execute(input.toModel());
     }
 }

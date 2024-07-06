@@ -1,7 +1,7 @@
 package com.financial.app.infraestructure.database;
 
-import com.financial.app.domain.entitys.CashFlow;
-import com.financial.app.domain.entitys.UserDataModel;
+import com.financial.app.domain.models.CashFlow;
+import com.financial.app.domain.models.UserDataModel;
 import com.financial.app.domain.ports.DatabasePort;
 import com.financial.app.infraestructure.database.entity.FlowEntity;
 import com.financial.app.infraestructure.database.entity.UserEntity;
